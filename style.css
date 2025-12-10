@@ -408,6 +408,156 @@ textarea {
   #searchBar {
     width: 100%;
   }
-  
+  /* =========================
+   MOBILE STYLES FOR ALOCI
+   (SAFE TO ADD AT THE END)
+   ========================= */
+
+@media (max-width: 768px) {
+  /* Que todo respire mejor en pantallas pequeñas */
+  body {
+    padding: 0.75rem;
+    font-size: 16px;
+  }
+
+  /* NAVBAR: logo arriba, links abajo en varias líneas */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .logo img,
+  .logo img {
+    max-width: 140px;
+    height: auto;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .navbar nav a,
+  nav a {
+    display: inline-flex;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  /* Títulos un poquito más pequeños para que no rompan la pantalla */
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  main,
+  .main-content,
+  .page {
+    padding: 1.25rem 0.25rem 2rem;
+  }
+
+  /* Bloques tipo tarjetas (si usas secciones como cajas) */
+  .card,
+  .section-box,
+  .content-box {
+    padding: 1rem;
+    border-radius: 0.9rem;
+  }
+
+  /* “Explore” o grid de opciones: una columna en cel */
+  .explore-grid,
+  .options-grid,
+  .quick-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .explore-grid a,
+  .options-grid a,
+  .quick-links a {
+    text-align: center;
+  }
+
+  /* Formularios: siempre 100% ancho */
+  form,
+  .post-form,
+  .search-form {
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  /* Botones grandes y cómodos para el dedo */
+  button,
+  .btn,
+  .btn-primary,
+  .btn-gradient {
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  /* Listas de álbumes / canciones: que no se peguen a los bordes */
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  /* Footer más compacto en móvil */
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 1rem 0.25rem 1.5rem;
+  }
+}
+
+/* Extra: si la pantalla es MUY pequeña (teléfonos chiquitos) */
+@media (max-width: 430px) {
+  .navbar nav {
+    gap: 0.25rem;
+  }
+
+  .navbar nav a,
+  nav a {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
 
 }
+
