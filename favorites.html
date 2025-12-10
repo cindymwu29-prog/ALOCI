@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOCI - Saved Posts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="aloci-logo.svg" alt="Aloci" class="logo-img">
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="soundOfHealing.html">Music</a>
+    <a href="ALOCI.postcast.html">Podcasts</a>
+    <a href="search.html">Search</a>
+    <a href="favorites.html" class="active">Saved</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+
+    <a id="signinLink" href="signin.html" class="signin-btn">Sign In</a>
+    <a id="logoutLink" class="signin-btn" style="display:none;">Log Out</a>
+  </nav>
+</header>
+
+<section class="post-section">
+  <h1>Your Saved Posts ⭐</h1>
+
+  <div id="postFeed"></div>
+</section>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const logged = localStorage.getItem("loggedUser");
+  if (!logged) {
+    alert("Log in to view saved posts.");
+    window.location.href = "signin.html";
+    return;
+  }
+
+  const users = JSON.parse(localStorage.getItem("users"));
+  const favIds = users[logged].favorites;
+  const posts = JSON.parse(localStorage.getItem("postsDB")) || [];
+
+  const feed = document.getElementById("postFeed");
+
+  const saved = posts.filter(p => favIds.includes(p.id));
+  saved.reverse().forEach(p => renderPost(p));
+});
+</script>
+
+</body>
+</html>

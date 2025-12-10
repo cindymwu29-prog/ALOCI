@@ -1,0 +1,25 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="alociGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97373"/>
+      <stop offset="50%" stop-color="#facc6b"/>
+      <stop offset="100%" stop-color="#a5b4ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- A L _ C I -->
+  <text x="0" y="42" font-family="Poppins, system-ui, sans-serif"
+        font-size="36" font-weight="700" fill="#4b2979">
+    A L   C I
+  </text>
+
+  <!-- spiral O -->
+  <g transform="translate(98,8)">
+    <circle cx="22" cy="22" r="20" fill="url(#alociGrad)"/>
+    <path d="M22 12
+             a10 10 0 1 0 10 10
+             a5 5 0 1 0 -5 -5"
+          fill="none" stroke="#fff" stroke-width="3"
+          stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOCI - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="aloci-logo.svg" alt="Aloci" class="logo-img">
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="soundOfHealing.html">Music</a>
+    <a href="ALOCI.postcast.html">Podcasts</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+
+    <a id="signinLink" href="signin.html" class="signin-btn">Sign In</a>
+    <a id="logoutLink" class="signin-btn" style="display:none;">Log Out</a>
+  </nav>
+</header>
+
+<div class="contact-container">
+  <h2>Contact Us</h2>
+
+  <label>Name:</label>
+  <input type="text" id="name" required>
+
+  <label>Email:</label>
+  <input type="email" id="email" required>
+
+  <label>Message:</label>
+  <textarea id="message" required></textarea>
+
+  <button onclick="sendMessage()" class="btn-gradient">Send</button>
+
+  <p id="contactMsg"></p>
+</div>
+
+<script src="contact.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

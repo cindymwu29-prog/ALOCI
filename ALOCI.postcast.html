@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOCI - Podcasts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="aloci-logo.svg" alt="Aloci" class="logo-img">
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="soundOfHealing.html">Music</a>
+    <a href="ALOCI.postcast.html" class="active">Podcasts</a>
+    <a href="search.html">Search</a>
+    <a href="favorites.html">Saved</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+
+    <a id="signinLink" href="signin.html" class="signin-btn">Sign In</a>
+    <a id="logoutLink" class="signin-btn" style="display:none;">Log Out</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>ALOCI Podcasts</h1>
+  <p>Which episode helped you today?</p>
+</section>
+
+<section class="post-section">
+  <textarea id="postInput" placeholder="Share a podcast recommendation #healing"></textarea>
+
+  <input type="file" id="postImage" accept="image/*">
+  <img id="imagePreview" style="display:none; max-width:150px;">
+
+  <button id="postBtn" class="btn-gradient">Post</button>
+
+  <div id="postFeed"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,413 @@
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f3ddee;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e4e4e4;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 55px;
+}
+
+.navbar nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #444;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #ff6ca8;
+}
+
+.signin-btn {
+  background: #ff6ca8;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white !important;
+}
+
+
+/* =====================================================
+   MUSIC PAGE SECTIONS (ALBUMS + SONGS)
+===================================================== */
+
+.music-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem 1rem;
+}
+
+.music-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #ff6ca8;
+}
+
+/* Lists for albums and songs */
+.album-list,
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Each album / song card */
+.album-list li,
+.song-list li {
+  background: white;
+  border-radius: 15px;
+  padding: 0.8rem;
+  width: 180px;              /* control card width */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Links inside cards */
+.album-list li a:first-child,
+.song-list li a:first-child {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+}
+
+.album-list li a:first-child:hover,
+.song-list li a:first-child:hover {
+  color: #ff6ca8;
+}
+
+/* Album / song cover images */
+.music-cover {
+  display: block;
+  margin: 0.5rem auto 0;
+
+  width: 120px;    /* smaller and consistent */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =====================================================
+   CARDS - EXPLORE
+===================================================== */
+.explore {
+  padding: 2rem;
+  text-align: center;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.explore-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* =====================================================
+   POST SECTION
+===================================================== */
+.post-section {
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 1rem;
+}
+
+#postImage {
+  margin-top: 1rem;
+}
+
+#imagePreview {
+  margin-top: 1rem;
+  border-radius: 15px;
+  max-width: 200px;
+}
+
+/* =====================================================
+   POSTS FEED
+===================================================== */
+#postFeed {
+  margin-top: 2rem;
+}
+
+.post {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.post img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-top: 0.8rem;
+}
+
+.post .actions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Buttons for post actions */
+.like-btn, .comment-btn, .edit-btn, .delete-btn, .save-btn, .send-comment {
+  border: none;
+  background: #ff6ca8;
+  color: white;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.like-btn:hover,
+.comment-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover,
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Comment section */
+.comment-box {
+  margin-top: 0.6rem;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.comment-box input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.comments p {
+  background: #fff1f8;
+  padding: 0.5rem 0.7rem;
+  margin-top: 0.4rem;
+  border-radius: 10px;
+}
+
+/* =====================================================
+   HASHTAGS
+===================================================== */
+.hashtag {
+  color: #ff4fa6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hashtag:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn-gradient {
+  background: linear-gradient(135deg, #ff6ca8, #ff85bd, #ffa3d0);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: 0.2s;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* =====================================================
+   PROFILE PAGE
+===================================================== */
+.profile-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-card {
+  background: white;
+  padding: 2rem;
+  max-width: 450px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #ffb6d9;
+}
+
+.profile-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.profile-card p {
+  margin-bottom: 1rem;
+}
+
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+.terms-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.terms-box {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.terms-box h3 {
+  color: #ff6ca8;
+  margin-top: 1.4rem;
+}
+
+/* =====================================================
+   SEARCH PAGE
+===================================================== */
+.search-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+#searchBar {
+  width: 70%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+/* =====================================================
+   FAVORITES PAGE
+===================================================== */
+
+/* Uses same post styles */
+
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+.contact-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#contactMsg {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #ff6ca8;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  #searchBar {
+    width: 100%;
+  }
+  
+
+}
