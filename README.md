@@ -1,17 +1,22 @@
 # ALOCI Community Platform
 
-ALOCI is a community platform designed to help people share experiences, art, music and stories related to mental health and personal growth.
+ALOCI is a web platform where users can share experiences, art and music to support mental health and community connection.
 
 ## Technologies
-HTML
-CSS
-JavaScript
-MySQL
+HTML  
+CSS  
+JavaScript  
 
 ## Features
-User profiles
-Posts and comments
-Community interactions
+- Create posts
+- Share personal experiences
+- Community interaction
+- Simple and clean interface
+
+## Future Improvements
+- User authentication
+- Database integration
+- Messaging between users
 
 ## Author
 Cindy Williams Urena
